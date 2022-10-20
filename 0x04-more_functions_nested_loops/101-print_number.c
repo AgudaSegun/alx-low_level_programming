@@ -1,8 +1,25 @@
-#include "main.h"
+#include"main.h"
+
 /**
-* print_number - that prints an integer
-*@n: print int
-* Return: Always 0.
+ * main - Entry point
+ *
+ * Description: computes the sum of all
+ *		the multiples of 3 or 5
+ *		below 1024 (excluded)
+ *
+ * Return: Always 0 (Success)
 */
-void print_number(int n)
+
+int main(void)
 {
+	int sum, num;
+
+	for (num = 0; num < 1024; ++num)
+	{
+		if ((num % 3 == 0) || (num % 5 == 0))
+			sum += num;
+	}
+	printf("%d\n", sum);
+
+	return (0);
+}
