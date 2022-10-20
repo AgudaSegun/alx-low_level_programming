@@ -1,25 +1,26 @@
 #include"main.h"
 
 /**
- * main - Entry point
+ * print_number - Prints an integer.
  *
- * Description: computes the sum of all
- *		the multiples of 3 or 5
- *		below 1024 (excluded)
- *
- * Return: Always 0 (Success)
+ * @n: The integer to be printed.
 */
 
-int main(void)
+void print_number(int n)
 {
-	int sum, num;
+	unsigned int num = n;
 
-	for (num = 0; num < 1024; ++num)
+	/*first check if its negative*/
+	if (n < 0)
 	{
-		if ((num % 3 == 0) || (num % 5 == 0))
-			sum += num;
+		_putchar('-');
+		num = -num;
 	}
-	printf("%d\n", sum);
 
-	return (0);
+	/*print the first few digits*/
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	/*print the last digit*/
+	_putchar((num % 10) + 48);
 }
