@@ -1,12 +1,4 @@
 #include "main.h"
-/**
- *create_array - array for prints a string
- *@size: number elements array
- *@c: char
- *Return: pointer
- */
-lines (22 sloc)  436 Bytes
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
